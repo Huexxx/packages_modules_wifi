@@ -4293,12 +4293,8 @@ public class WifiServiceImpl extends BaseWifiService {
      * @param countryCode A 2-Character alphanumeric country code.
      *
      */
-    @RequiresApi(Build.VERSION_CODES.S)
     @Override
     public void setOverrideCountryCode(@NonNull String countryCode) {
-        if (!SdkLevel.isAtLeastS()) {
-            throw new UnsupportedOperationException();
-        }
         mContext.enforceCallingOrSelfPermission(
                 Manifest.permission.MANAGE_WIFI_COUNTRY_CODE, "WifiService");
         if (!WifiCountryCode.isValid(countryCode)) {
@@ -4318,12 +4314,8 @@ public class WifiServiceImpl extends BaseWifiService {
      * Clear the country code previously set through setOverrideCountryCode method.
      *
      */
-    @RequiresApi(Build.VERSION_CODES.S)
     @Override
     public void clearOverrideCountryCode() {
-        if (!SdkLevel.isAtLeastS()) {
-            throw new UnsupportedOperationException();
-        }
         mContext.enforceCallingOrSelfPermission(
                 Manifest.permission.MANAGE_WIFI_COUNTRY_CODE, "WifiService");
         if (isVerboseLoggingEnabled()) {
