@@ -3993,7 +3993,6 @@ public class WifiManager {
      *
      * @hide
      */
-    @RequiresApi(Build.VERSION_CODES.S)
     @SystemApi
     @RequiresPermission(android.Manifest.permission.MANAGE_WIFI_COUNTRY_CODE)
     public void setOverrideCountryCode(@NonNull String country) {
@@ -4011,7 +4010,6 @@ public class WifiManager {
      *
      * @hide
      */
-    @RequiresApi(Build.VERSION_CODES.S)
     @SystemApi
     @RequiresPermission(android.Manifest.permission.MANAGE_WIFI_COUNTRY_CODE)
     public void clearOverrideCountryCode() {
